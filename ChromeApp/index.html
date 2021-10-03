@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momentum</title>
+    <style>
+        h2 {
+            position: relative;
+            animation: example 10s linear 0.5s infinite alternate;
+        }
+
+        @keyframes example {
+            0% {
+                color: white;
+            }
+
+            50% {
+                color: wheat;
+            }
+
+            100% {
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="weather" style="position: absolute;top:0; right: 0;">
+        <span></span>
+        <span></span>
+    </div>
+
+    <div>
+        <form class="hidden" id="login-form">
+            <input required maxlength="15" value="worker" type="text" placeholder="What is your name?" />
+            <input type="submit" value="Log In" />
+        </form>
+    </div>
+
+    <div id="clock-box">
+        <h2 id="clock">00:00</h2>
+    </div>
+
+    <h1 id="greeting" class="hidden"></h1>
+
+
+
+    <div id="list-box" overflow: hidden;>
+        <div id="title"  style="display: flex; justify-content: center; align-items: center;   background-color: #4285f4; height: 40px; ">
+            <h4 style="color: white; text-align: center; margin: 0;  font-size: 20px; vertical-align: middle;">Todo List</h4>
+        </div>
+        <div style="display: flex; flex-direction: column; flex-wrap: wrap;">
+            <ul id="todo-list"></ul>
+        </div>
+        <form id="todo-form" style="position: absolute; right: 0; bottom: 0;">
+            <input type="text" placeholder="Write a To Do and Press Enter" required />
+        </form>
+    </div>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>
